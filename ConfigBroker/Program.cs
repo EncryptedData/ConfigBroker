@@ -16,15 +16,11 @@ public class Program
             
             var builder = WebApplication.CreateBuilder(args);
             
-            builder.Services.AddSerilog((sp, c) => c
-                .ReadFrom.Configuration(builder.Configuration)
-                .ReadFrom.Services(sp)
-                .Enrich.FromLogContext()
-                .WriteTo.Console());
+            ConfigureServices(builder.Services, builder.Configuration);
             
             var app = builder.Build();
-
-            app.MapGet("/", () => "Hello World!");
+            
+            ConfigureApplication(app);
             
             Log.Information("Starting ConfigBroker...");
 
@@ -38,5 +34,19 @@ public class Program
         {
             await Log.CloseAndFlushAsync();
         }
+    }
+
+    private static void ConfigureServices(IServiceCollection services, IConfiguration config)
+    {
+        services.AddSerilog((sp, c) => c
+            .ReadFrom.Configuration(config)
+            .ReadFrom.Services(sp)
+            .Enrich.FromLogContext()
+            .WriteTo.Console());
+    }
+
+    private static void ConfigureApplication(WebApplication app)
+    {
+        app.MapGet("/", () => "Hello World!");
     }
 }
