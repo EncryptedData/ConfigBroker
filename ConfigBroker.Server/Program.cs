@@ -1,6 +1,6 @@
 using Serilog;
 
-namespace ConfigBroker;
+namespace ConfigBroker.Server;
 
 public class Program
 {
@@ -12,7 +12,7 @@ public class Program
 
         try
         {
-            Log.Information("Loading ConfigBroker...");
+            Log.Information("Loading ConfigBroker.Server...");
             
             var builder = WebApplication.CreateBuilder(args);
             
@@ -22,13 +22,13 @@ public class Program
             
             ConfigureApplication(app);
             
-            Log.Information("Starting ConfigBroker...");
+            Log.Information("Starting ConfigBroker.Server...");
 
             await app.RunAsync();
         }
         catch (Exception e)
         {
-            Log.Error(e, "Unhandled exception killed ConfigBroker Server");
+            Log.Error(e, "Unhandled exception killed ConfigBroker.Server Server");
         }
         finally
         {

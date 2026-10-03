@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigBroker", "ConfigBroker\ConfigBroker.csproj", "{D9D68A08-228A-42D4-A9A2-25AEAE00890C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigBroker.Server", "ConfigBroker.Server\ConfigBroker.Server.csproj", "{D9D68A08-228A-42D4-A9A2-25AEAE00890C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
