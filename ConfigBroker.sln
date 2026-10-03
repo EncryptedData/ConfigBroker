@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigBroker", "ConfigBroker\ConfigBroker.csproj", "{D9D68A08-228A-42D4-A9A2-25AEAE00890C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9D68A08-228A-42D4-A9A2-25AEAE00890C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D68A08-228A-42D4-A9A2-25AEAE00890C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D68A08-228A-42D4-A9A2-25AEAE00890C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D68A08-228A-42D4-A9A2-25AEAE00890C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
