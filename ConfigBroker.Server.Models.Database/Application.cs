@@ -20,4 +20,6 @@ public class Application : INamedEntity
     public List<ConfigItem> ConfigItems { get; set; }
     
     public List<Snapshot> Snapshots { get; set; }
+    
+    public List<UserApplicationRoleClaim> Users { get; set; }
 }
