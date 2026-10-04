@@ -28,4 +28,8 @@ public class ConfigItem : IEntity
     public User LastModifiedBy { get; set; }
     
     public DateTime LastModifiedOn { get; set; }
+    
+    public List<string> Labels { get; set; }
+    
+    public List<string> Tags { get; set; }
 }
