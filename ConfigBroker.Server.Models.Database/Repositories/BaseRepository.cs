@@ -1,4 +1,5 @@
 using ConfigBroker.Server.Models.Database.Abstractions;
+using ConfigBroker.Server.Models.Database.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConfigBroker.Server.Models.Database.Repositories;
@@ -13,9 +14,11 @@ public abstract class BaseRepository<T> :
         _db = db;
     }
     
-    public async Task<T?> GetByIdAsync(Guid id)
+    public async Task<T?> GetByIdAsync(Guid id, bool trackEntity = true)
     {
-        return await _db.FirstOrDefaultAsync(e => e.Id == id);
+        return await _db
+            .SetTracking(trackEntity)
+            .FirstOrDefaultAsync(e => e.Id == id);
     }
 
     public async Task AddAsync(T entity)

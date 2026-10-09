@@ -16,4 +16,6 @@ public class ConfigBrokerDbContext : IdentityDbContext<User, IdentityRole<Guid>,
     public DbSet<ConfigItem> ConfigItems { get; set; }
     
     public DbSet<Snapshot> Snapshots { get; set; }
+    
+    public DbSet<Group> Groups { get; set; }
 }

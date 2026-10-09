@@ -9,8 +9,6 @@ public interface IUnitOfWork : IAsyncDisposable
     ISnapshotRepository SnapshotRepository { get; }
     
     IUserRepository UserRepository { get; }
-    
-    bool IsReadOnly { get; }
 
     Task CommitAsync(CancellationToken cancellationToken = default);
 }

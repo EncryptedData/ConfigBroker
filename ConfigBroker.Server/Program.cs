@@ -1,3 +1,5 @@
+using ConfigBroker.Server.Models.Database;
+using ConfigBroker.Server.Models.Database.Config;
 using Serilog;
 
 namespace ConfigBroker.Server;
@@ -43,6 +45,11 @@ public class Program
             .ReadFrom.Services(sp)
             .Enrich.FromLogContext()
             .WriteTo.Console());
+
+        services.AddDbContext<ConfigBrokerDbContext>(options => 
+            DatabaseConfiguration.Configure(options, config));
+        services.AddDbContextFactory<ConfigBrokerDbContext>(options =>
+            DatabaseConfiguration.Configure(options, config));
     }
 
     private static void ConfigureApplication(WebApplication app)

@@ -10,7 +10,7 @@ public interface IConfigItemRepository : IRepository<ConfigItem>
         ConfigValueSource? sourceMatches = null,
         DateTime? lastModifiedStart = null,
         DateTime? lastModifiedEnd = null,
-        IEnumerable<string>? containsLabels = null,
-        IEnumerable<string>? containsTags = null,
+        IList<string>? containsLabels = null,
+        IList<string>? containsTags = null,
         bool trackEntities = true);
 }
