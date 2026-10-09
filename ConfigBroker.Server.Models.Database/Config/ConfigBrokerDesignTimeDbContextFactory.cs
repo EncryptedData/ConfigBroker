@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace ConfigBroker.Server.Models.Database.Config;
 
-public class DesignTImeContext : IDesignTimeDbContextFactory<ConfigBrokerDbContext>
+public class ConfigBrokerDesignTimeDbContextFactory : IDesignTimeDbContextFactory<ConfigBrokerDbContext>
 {
     public ConfigBrokerDbContext CreateDbContext(string[] args)
     {
