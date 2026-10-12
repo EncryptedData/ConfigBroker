@@ -47,11 +47,14 @@ public class Program
             .Enrich.FromLogContext()
             .WriteTo.Console());
 
+        services.AddControllers();
+
         services.AddDatabaseServices(config);
     }
 
     private static void ConfigureApplication(WebApplication app)
     {
-        app.MapGet("/", () => "Hello World!");
+        app.UseRouting();
+        app.MapControllers();
     }
 }

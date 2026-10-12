@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ConfigBroker.Server.Controllers.ApiV1\ConfigBroker.Server.Controllers.ApiV1.csproj" />
       <ProjectReference Include="..\ConfigBroker.Server.Models.Database\ConfigBroker.Server.Models.Database.csproj" />
     </ItemGroup>
 
